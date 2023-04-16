@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Raleway", sans-serif;
+  @apply h-full text-white bg-fixed bg-gradient-to-tl from-slate-500 to-blue-500;
+}
+
+.title {
+  @apply text-[2rem] font-extrabold my-3 text-center 2xl:text-[18rem] 2xl:fixed 2xl:bottom-0 2xl:z-0 2xl:rotate-[270deg] 2xl:w-96 2xl:-left-12 2xl:opacity-30 2xl:pointer-events-none;
+}
+
+.page {
+  @apply max-w-screen-lg px-3 pt-24 mx-auto;
+}
+
+.page.sm {
+  @apply max-w-screen-sm mx-auto;
+}
+
+.navbar {
+  @apply fixed top-0 left-0 right-0 z-10 flex items-center justify-between h-20 p-3 text-white shadow-2xl bg-slate-900;
+}
+
+.navbar .brand {
+  @apply flex items-center gap-3 text-xl;
+}
+
+.navbar .brand img {
+  @apply w-16;
+}
+
+.navbar .brand .active {
+  @apply font-bold text-sky-400;
+}
+
+.navbar .links {
+  @apply fixed p-5 bottom-2 right-2;
+}
+
+/* forms */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @apply text-black;
+}
+
+input[type="text"].error,
+input[type="number"].error,
+input[type="email"].error,
+input[type="password"].error,
+textarea.error {
+  @apply bg-red-300;
+}
+
+/* buttons */
+.btn {
+  @apply px-5 py-2 m-1 text-sm font-bold text-center transition rounded-full disabled:opacity-30;
+}
+
+.btn.dark {
+  @apply text-white bg-slate-700 hover:bg-slate-900;
+}
+
+.btn.danger {
+  @apply text-white bg-red-400 hover:bg-red-500;
+}
+
+.btn.primary {
+  @apply text-black bg-white hover:bg-sky-200;
+}
+
+.btn.accent {
+  @apply text-white bg-pink-500 hover:bg-pink-600;
+}
+
+.btn.success {
+  @apply text-white bg-green-500 hover:bg-green-700;
+}
+
+.btn.outline {
+  @apply border border-white;
+}
+
+.btn.lg {
+  @apply text-2xl;
+}
+
+/* tables */
+.table-auto th,
+.table-auto td {
+  @apply px-2 py-4 border-b border-b-blue-500;
+}
+
+.table-auto.hover tbody > tr:hover {
+  @apply bg-blue-500;
+}
