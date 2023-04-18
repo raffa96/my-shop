@@ -1,4 +1,4 @@
-const CartPage = () => {
+export const CartPage = () => {
   return (
     <>
       <h1 className="title">Cart</h1>
@@ -9,5 +9,3 @@ const CartPage = () => {
     </>
   );
 };
-
-export default CartPage;

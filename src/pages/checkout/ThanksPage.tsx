@@ -1,4 +1,4 @@
-const ThanksPage = () => {
+export const ThanksPage = () => {
   return (
     <>
       <h1 className="title">Thanks</h1>
@@ -9,5 +9,3 @@ const ThanksPage = () => {
     </>
   );
 };
-
-export default ThanksPage;

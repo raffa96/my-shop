@@ -7,7 +7,7 @@ interface InputProps {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = (props: InputProps) => {
+export const Input = (props: InputProps) => {
   const { type, className, placeholder, value, disabled, onChange } = props;
   return (
     <input
@@ -20,5 +20,3 @@ const Input = (props: InputProps) => {
     />
   );
 };
-
-export default Input;

@@ -13,7 +13,7 @@ interface TableProps {
   rows: row[];
 }
 
-const Table = (props: TableProps) => {
+export const Table = (props: TableProps) => {
   const { className, columns, rows } = props;
   return (
     <table className={className}>
@@ -36,5 +36,3 @@ const Table = (props: TableProps) => {
     </table>
   );
 };
-
-export default Table;

@@ -8,7 +8,7 @@ interface TextAreaProps {
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const TextArea = (props: TextAreaProps) => {
+export const TextArea = (props: TextAreaProps) => {
   const { rows, cols, className, placeholder, value, disabled, onChange } =
     props;
   return (
@@ -23,5 +23,3 @@ const TextArea = (props: TextAreaProps) => {
     />
   );
 };
-
-export default TextArea;

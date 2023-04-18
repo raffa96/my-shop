@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import Button from "./Button";
+import { Button } from "@/shared/index";
 import logo from "../../../assets/logo.png";
 
-const Navbar = () => {
+export const Navbar = () => {
   const isActive = (obj: { isActive: boolean }) =>
     obj.isActive ? "active" : "";
 
@@ -32,5 +32,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

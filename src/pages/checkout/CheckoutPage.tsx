@@ -1,4 +1,4 @@
-const CheckoutPage = () => {
+export const CheckoutPage = () => {
   return (
     <>
       <h1 className="title">Checkout</h1>
@@ -9,5 +9,3 @@ const CheckoutPage = () => {
     </>
   );
 };
-
-export default CheckoutPage;
