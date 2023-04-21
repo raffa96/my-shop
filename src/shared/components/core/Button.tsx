@@ -1,13 +1,14 @@
 interface ButtonProps {
   className?: string;
   disabled?: boolean;
+  onClick?: () => void;
   children?: React.ReactNode;
 }
 
 export const Button = (props: ButtonProps) => {
-  const { className, disabled, children } = props;
+  const { className, disabled, onClick, children } = props;
   return (
-    <button className={className} disabled={disabled}>
+    <button className={className} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   );
