@@ -6,7 +6,7 @@ interface ProductCardProps {
   onAddToCart: (product: Partial<Product>) => void;
 }
 
-export function ProductCard(props: ProductCardProps) {
+export const ProductCard = (props: ProductCardProps) => {
   const { product, onAddToCart } = props;
   return (
     <div
@@ -33,4 +33,4 @@ export function ProductCard(props: ProductCardProps) {
       </Button>
     </div>
   );
-}
+};
