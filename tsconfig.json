@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@/shared/*": ["./src/shared/*"],
+      "@/shared/*": ["./src/shared/index"],
       "@/models/*": ["./src/models/*"],
       "@/services/*": ["./src/services/*"],
       "@/pocketbase": ["./src/pocketbase.ts"]

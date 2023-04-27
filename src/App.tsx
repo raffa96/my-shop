@@ -4,7 +4,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import { Navbar } from "@/shared/index";
+import { Navbar } from "@/shared/";
 import {
   LoginPage,
   CMSPage,

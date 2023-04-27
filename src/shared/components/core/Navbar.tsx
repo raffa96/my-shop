@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Button } from "@/shared/index";
+import { Button } from "@/shared/";
 import logo from "../../../assets/logo.png";
 
 export const Navbar = () => {
