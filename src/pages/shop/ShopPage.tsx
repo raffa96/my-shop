@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 import { pb } from "@/pocketbase";
-import { Product } from "@/models/products";
+import { Product } from "@/models/product";
 import { ProductCard } from "./components/ProductCard";
 import { Error, Spinner } from "@/shared/";
+import { useCart, useCartPanel } from "@/services/cart";
 
 export const ShopPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [hasError, setHasError] = useState<boolean>(false);
+
+  const openCartPanel = useCartPanel((state) => state.openOverlay);
+  const addToCart = useCart((state) => state.addToCart);
 
   const loadData = () => {
     setHasError(false);
@@ -27,8 +31,9 @@ export const ShopPage = () => {
       });
   };
 
-  const addToCart = (product: Partial<Product>) => {
-    console.log("Add to cart", product);
+  const onAddToCart = (product: Product) => {
+    openCartPanel();
+    addToCart(product);
   };
 
   useEffect(() => {
@@ -48,7 +53,7 @@ export const ShopPage = () => {
           <ProductCard
             key={product.id}
             product={product}
-            onAddToCart={addToCart}
+            onAddToCart={onAddToCart}
           />
         ))}
       </div>

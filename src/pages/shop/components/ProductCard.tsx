@@ -1,9 +1,9 @@
-import { Product } from "@/models/products";
+import { Product } from "@/models/product";
 import { Button } from "@/shared/";
 
 interface ProductCardProps {
-  product: Partial<Product>;
-  onAddToCart: (product: Partial<Product>) => void;
+  product: Product;
+  onAddToCart: (product: Product) => void;
 }
 
 export const ProductCard = (props: ProductCardProps) => {

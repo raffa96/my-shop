@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { Button, CartPanel } from "@/shared/";
 import logo from "../../../assets/logo.png";
-import { useCartPanel } from "@/services/cart";
+import { selectTotalCartItems, useCart, useCartPanel } from "@/services/cart";
 
 export const Navbar = () => {
   const isCartPanelOpen = useCartPanel((state) => state.isOpen);
   const toggleCartPanel = useCartPanel((state) => state.toggle);
+  const totalCartItems = useCart(selectTotalCartItems);
 
   const isActive = (obj: { isActive: boolean }) =>
     obj.isActive ? "active" : "";
@@ -22,7 +23,7 @@ export const Navbar = () => {
       {/* cart button badge */}
       <div className="cart">
         <Button className="btn accent lg" onClick={toggleCartPanel}>
-          Cart: 0
+          Cart: {totalCartItems}
         </Button>
       </div>
       {/* cart panel */}
