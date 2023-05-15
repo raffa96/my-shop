@@ -1,10 +1,11 @@
+import { NavLink } from "react-router-dom";
 import {
   selectCartIsEmpty,
   selectCartItems,
   selectTotalCartCost,
   useCart,
-} from "@/services/cart";
-import { NavLink } from "react-router-dom";
+} from "@/services/cart/";
+import { Button } from "@/shared/";
 
 export const CartPage = () => {
   const cartItems = useCart(selectCartItems);
@@ -34,19 +35,19 @@ export const CartPage = () => {
 
             <div className="flex flex-col items-center gap-4 sm:flex-row">
               <div className="flex items-center gap-3">
-                <button
+                <Button
                   className="btn primary"
                   onClick={() => decreaseQuantity(product.id)}
                 >
                   -
-                </button>
+                </Button>
                 <div>Quantity: {quantity}</div>
-                <button
+                <Button
                   className="btn primary"
                   onClick={() => increaseQuantity(product.id)}
                 >
                   +
-                </button>
+                </Button>
               </div>
               <div className="w-16 text-center">
                 € {quantity * product.price}

@@ -18,7 +18,9 @@
     "paths": {
       "@/shared/*": ["./src/shared/index"],
       "@/models/*": ["./src/models/*"],
+      "@/types/*": ["./src/types/*"],
       "@/services/*": ["./src/services/*"],
+      "@/constants/*": ["./src/constants/index"],
       "@/pocketbase": ["./src/pocketbase.ts"]
     }
   },
