@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { selectCartItems, selectTotalCartCost, useCart } from "@/services/cart";
-import { EMAIL_REGEX } from "@/constants/*";
+import { EMAIL_REGEX } from "@/constants/";
 
 export const useCheckout = () => {
   const navigate = useNavigate();
