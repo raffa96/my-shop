@@ -1,27 +1,9 @@
-import { useReducer } from "react";
-
-import { get } from "@/services/products/products.api";
-import {
-  ProductsState,
-  productsReducer,
-} from "@/services/products/products.reducer";
+import { useProductsService } from "@/services/products";
 
 export const CMSProductsPage = () => {
-  const initialState: ProductsState = {
-    loading: false,
-    products: [],
-    error: null,
-    active: null,
-  };
+  const { state, actions } = useProductsService();
 
-  const [state, dispatch] = useReducer(productsReducer, initialState);
-
-  const getProducts = async () => {
-    dispatch({ type: "LOADING", payload: true });
-    const result = await get();
-    const { items: products } = result;
-    dispatch({ type: "LOADED", payload: products });
-  };
+  const getProducts = () => actions.getProducts();
 
   return (
     <>

@@ -22,7 +22,7 @@ export type DeleteAction = {
 };
 export type SetActiveAction = {
   type: "SET_ACTIVE";
-  payload: Partial<Product>;
+  payload: Partial<Product> | null;
 };
 export type ErrorAction = {
   type: "ERROR";
